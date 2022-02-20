@@ -1,0 +1,144 @@
+.product {
+    &-slider {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        background-color: #f7f7f7;
+        &__img {
+            margin: 11px 0 $slider-offset 0;
+        }
+        &__container {
+            display: flex;
+            justify-content: center;
+        }
+        &__button {
+            width: 47px;
+            height: 47px;
+            @include btn(transparent, transparent, rgba(42, 42, 42, 0.15), #000000);
+            &:hover {
+                .product-slider__button_arrow {
+                    @include btn(transparent, rgba(42, 42, 42, 0.15), transparent, $main-red-color);
+                }
+            }
+        }
+    }
+    &-details {
+        width: 100%;
+        flex-direction: column;
+        display: flex;
+        align-items: center;
+        text-align: center;
+        border: 1px solid #eaeaea;
+        padding: 64px 0;
+        margin-top: -$slider-offset;
+        z-index: 1;
+        background-color: $btn-text-hover-color;
+        &__heading {
+            font-weight: 300;
+            @include font(14px, 17px, $main-red-color);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-transform: uppercase;
+        }
+        &__header-line {
+            width: 65px;
+            height: 3px;
+            background-color: #ef5b70;
+            margin: 12px 0;
+        }
+        &__header-description {
+            font-weight: 300;
+            @include font(18px, 22px, #4d4d4d);
+        }
+        &__info {
+            width: 555px;
+            font-weight: 300;
+            @include font(14px, 17px, #5e5e5e);
+            text-align: center;
+            margin: 48px 0 32px 0;
+        }
+        &__price {
+            font-weight: 300;
+            @include font(24px, 29px, #ef5b70);
+        }
+        &__line {
+            width: 642px;
+            height: 1px;
+            background-color: #eaeaea;
+            margin: 65px 0;
+        }
+        &__button {
+            width: 212px;
+            height: 49px;
+            @include font(16px, 19px, #f26376);
+            margin: 48px 0 64px 0;
+            @include btn(#f26376, 1px solid #ff6a6a, $btn-text-hover-color, #f26376);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            &-img {
+                margin-right: 23px;
+            }
+            &:hover {
+                @include btn-hover($btn-text-hover-color, #f26376, none, $btn-text-hover-color);
+            }
+        }
+        &__filters {
+            display: flex;
+            margin-top: 23px;
+            &_color {
+                width: 128px;
+                position: relative;
+            }
+            &_size {
+                width: 159px;
+                position: relative;
+            }
+            &_quantity {
+                width: 93px;
+                position: relative;
+            }
+        }
+        &__filter {
+            &-body {
+                font-size: 14px;
+                color: #6f6e6e;
+                &_center {
+                    margin: 0 23px;
+                }
+            }
+            &-body[open] {
+                background: $btn-text-hover-color;
+                box-shadow: 6px 4px 35px rgba(0, 0, 0, 0.21);
+                padding: 0 25px 11px 0;
+                position: absolute;
+                z-index: 1;
+            }
+            &-label {
+                display: block;
+                margin-top: -23px;
+                display: flex;
+                flex-wrap: nowrap;
+                align-items: center;
+            }
+            &-icon {
+                margin-left: 9px;
+            }
+            &-box {
+                margin: 17px 0 0 11px;
+                display: flex;
+                flex-direction: column;
+                align-items: flex-start;
+            }
+            &-box label {
+                display: block;
+            }
+            &-input {
+                width: 75px;
+            }
+        }
+    }
+}
+
+@import "adaptive/product_adaptive";

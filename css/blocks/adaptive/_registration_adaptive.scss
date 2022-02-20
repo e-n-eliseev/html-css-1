@@ -1,0 +1,25 @@
+@media (max-width: 1200px) {
+    .registration {
+        &__form {
+            margin: 40px 0 96px 0;
+        }
+        &__advantages {
+            @include font(16px, 19px, #000000);
+            padding: 40px 5px 0 22px;
+        }
+        &__text {
+            margin: 32px 0 22px;
+        }
+    }
+}
+@media (max-width: 766px) {
+    .registration {
+        flex-wrap: wrap;
+        &__form {
+            margin: 40px 0;
+        }
+        &__advantages {
+            padding: 0 0 100px 0;
+        }
+    }
+}

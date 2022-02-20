@@ -1,0 +1,87 @@
+.feedback {
+    margin: -5px 0 -7px 0;
+    background-color: #f4f4f4;
+    background-image: url(../img/feedback.png);
+    background-position: left bottom;
+    background-repeat: no-repeat;
+    background-size: cover;
+    &__content {
+        display: flex;
+        justify-content: space-between;
+        padding-right: 100px;
+    }
+    &__comment {
+        width: 360px;
+        padding-top: 97px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        &-avatar {
+            margin-bottom: 31px;
+        }
+        &-text {
+            @include font(20px, 24px, #222224);
+            text-align: center;
+        }
+    }
+    &__subscribe {
+        width: 360px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 160px 0;
+        &-text {
+            font-weight: bold;
+            @include font(24px, 30px, #222224);
+            text-align: center;
+            margin-bottom: 32px;
+            &_normal {
+                font-weight: normal;
+                font-size: 18px;
+            }
+        }
+        &-form {
+            display: flex;
+            &-button {
+                width: 100px;
+                height: 49px;
+                @include btn($btn-text-hover-color, none, #f16d7f, #f16d7f);
+                @include font(14px, 17px, $btn-text-hover-color);
+                text-align: center;
+                border-top-right-radius: 22px;
+                border-bottom-right-radius: 22px;
+                transition: 0.5s ease-in-out 0.1s;
+                &:hover {
+                    @include btn-hover(
+                        $btn-text-hover-color,
+                        $main-red-color,
+                        1px solid transparent,
+                        $btn-text-hover-color
+                    );
+                }
+            }
+            &-text {
+                background-color: #e1e1e1;
+                width: 256px;
+                height: 49px;
+                border-radius: 22px 0 0 22px;
+                @include font(14px, 17px, #222224);
+                padding: 0 22px;
+                border: 1px solid transparent;
+                transition: 0.5s ease-in-out 0.1s;
+                &::placeholder {
+                    opacity: 0.67;
+                }
+                &:hover {
+                    background-color: $item-background-color;
+                }
+                &:focus {
+                    outline: none;
+                    border: 1px solid $main-red-color;
+                    background-color: $item-background-color;
+                }
+            }
+        }
+    }
+}
+@import "adaptive/feedback_adaptive";

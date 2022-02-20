@@ -1,0 +1,32 @@
+@mixin font($size: 14px, $height: 17px, $color: #5d5d5d) {
+    font-size: $size;
+    line-height: $height;
+    color: $color;
+}
+
+@mixin btn(
+    $color: $btn-hover-color,
+    $border: 1px solid $btn-hover-color,
+    $bg-color: transparent,
+    $fill: $btn-text-hover-color
+) {
+    text-decoration: none;
+    background-color: $bg-color;
+    color: $color;
+    fill: $fill;
+    border: $border;
+    transition: 0.5s ease-in-out 0.2s;
+}
+
+@mixin btn-hover(
+    $color: $btn-text-hover-color,
+    $bg-color: $main-red-color,
+    $border: 1px solid transparent,
+    $fill: $btn-text-hover-color
+) {
+    color: $color;
+    fill: $fill;
+    background-color: $bg-color;
+    border: $border;
+    transform: scale(1.1);
+}

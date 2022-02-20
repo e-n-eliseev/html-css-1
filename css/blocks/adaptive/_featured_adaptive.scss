@@ -1,0 +1,30 @@
+@media (max-width: 1200px) {
+    .featured {
+        padding: 155px 0 65px 0;
+        &__item {
+            margin-bottom: 16px;
+            &-info {
+                margin: 25px 29px 20px 16px;
+            }
+            &_last {
+                display: none;
+            }
+        }
+        &__button-all {
+            margin: 16px auto;
+        }
+    }
+}
+@media (max-width: 766px) {
+    .featured {
+        padding: 64px 0 96px 0;
+        &__item {
+            &-info {
+                margin: 25px 29px 20px 16px;
+            }
+        }
+        &__button-all {
+            margin: 24px auto;
+        }
+    }
+}

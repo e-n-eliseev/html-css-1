@@ -1,0 +1,32 @@
+@media (max-width: 1200px) {
+    .header {
+        &__navigation {
+            padding: 18px 16px;
+        }
+    }
+}
+@media (max-width: 766px) {
+    .header {
+        &__navigation {
+            padding: 18px 8px;
+        }
+        &__right {
+            &-profile {
+                position: absolute;
+                opacity: 0;
+                width: 1px;
+                height: 1px;
+                right: 1px;
+                top: 1px;
+            }
+            &-basket {
+                right: 1px;
+                top: 1px;
+                width: 1px;
+                height: 1px;
+                position: absolute;
+                opacity: 0;
+            }
+        }
+    }
+}

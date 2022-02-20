@@ -1,0 +1,95 @@
+@media (max-width: 1200px) {
+    .basket {
+        display: flex;
+        flex-direction: column;
+        padding: 59px 0 128px 0;
+    }
+    .cart {
+        &__item {
+            max-width: 736px;
+        }
+        &__details {
+            margin: 22px 137px 20px 31px;
+        }
+        &__button-wrapper {
+            margin-top: 22px;
+        }
+        &__button_link {
+            margin-left: 48px;
+        }
+    }
+    .purchase {
+        display: flex;
+        margin-top: 64px;
+        &__address {
+            margin-bottom: 0;
+        }
+        &__price {
+            margin-left: 15px;
+        }
+    }
+}
+@media (max-width: 766px) {
+    .basket {
+        padding: 39px 0 0 0;
+    }
+    .cart {
+        &__img {
+            width: 143px;
+            height: 188px;
+        }
+        &__item {
+            max-width: 360px;
+            margin-bottom: 32px;
+            box-shadow: 8px 8px 21px rgba(0, 0, 0, 0.13);
+        }
+        &__delete {
+            width: 9px;
+            height: 11px;
+            margin: 17px 12px 0 0;
+            &-img {
+                width: 9px;
+                height: 11px;
+            }
+        }
+        &__details {
+            margin: 14px 51px 20px 17px;
+        }
+        &__name {
+            @include font(16px, 19px, #222222);
+            margin-bottom: 26px;
+        }
+        &__info {
+            @include font(14px, 17px, #575757);
+            margin-bottom: 4px;
+        }
+        &__input {
+            width: 24px;
+            height: 15px;
+            margin-left: 15px;
+            @include font(10px, 12px, #656565);
+            padding: 0px 10px 1px 10px;
+        }
+
+        &__button-wrapper {
+            margin-top: -2px;
+        }
+        &__button {
+            width: 175px;
+            height: 33px;
+            font-weight: normal;
+            @include font(12px, 14px, #575757);
+            &_link {
+                margin-left: 9px;
+                padding: 9px 23px;
+            }
+        }
+    }
+    .purchase {
+        margin: 48px 0 96px 0;
+        flex-direction: column;
+        &__price {
+            margin: 48px 0 0 0;
+        }
+    }
+}

@@ -1,0 +1,37 @@
+@media (max-width: 1200px) {
+    .feedback {
+        background-position-x: -335px;
+        background-position-y: 56px;
+        &__content {
+            flex-direction: column;
+            align-items: center;
+            padding-right: 0;
+        }
+        &__comment {
+            padding: 64px 0 88px 0;
+        }
+        &__subscribe {
+            padding: 0 0 140px 0;
+            &-text {
+                margin-bottom: 27px;
+            }
+        }
+    }
+}
+@media (max-width: 766px) {
+    .feedback {
+        background-position-x: -430px;
+        background-position-y: 3px;
+        &__comment {
+            padding: 64px 0 59px 0;
+        }
+        &__subscribe {
+            padding: 0 0 109px 0;
+            &-text {
+                &_normal {
+                    font-size: 14px;
+                }
+            }
+        }
+    }
+}

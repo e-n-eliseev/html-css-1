@@ -1,0 +1,86 @@
+.registration {
+    display: flex;
+    &__form {
+        border: none;
+        flex: 0 0 360px;
+        margin: 64px 0 96px 0;
+        &-fieldset {
+            border: none;
+            font-weight: 300;
+            @include font(16px, 19px, #222222);
+            margin-bottom: 33px;
+        }
+        &-input {
+            width: 360px;
+            height: 45px;
+            margin: 20px 0;
+            border: 1px solid #a4a4a4;
+            padding: 0 17px;
+            transition: 0.5s ease-in-out 0.1s;
+            &:focus {
+                outline: none;
+                border: 1px solid $main-red-color;
+                background-color: $item-background-color;
+            }
+            &::placeholder {
+                font-weight: 300;
+                @include font(13px, 16px, #b1b1b1);
+            }
+            &:hover {
+                background-color: $item-background-color;
+            }
+        }
+        &-text {
+            margin: -5px 0 0 0;
+            font-weight: 300;
+            @include font(13px, 16px, #b1b1b1);
+        }
+        &-button {
+            width: 167px;
+            height: 50px;
+            @include font(14px, 17px, $btn-text-hover-color);
+            @include btn($btn-text-hover-color, 1px solid transparent, $main-red-color, $btn-text-hover-color);
+            margin-top: 6px;
+            &__img {
+                margin-left: 20px;
+            }
+        }
+        &-button:hover {
+            @include btn-hover($main-red-color, $btn-text-hover-color, 1px solid $main-red-color, $main-red-color);
+        }
+    }
+    &__radio {
+        margin-right: 10px;
+        font-weight: 300;
+        @include font(11px, 13px, #000000);
+        &-gender {
+            width: 17px;
+            height: 17px;
+            margin-right: 10px;
+        }
+        &_center {
+            margin: 0 20px;
+        }
+    }
+    &__text {
+        margin: 22px 0;
+    }
+    &__advantages {
+        padding: 64px 20px 0 128px;
+        font-weight: 300;
+        @include font(24px, 29px, #000000);
+    }
+    &__perks {
+        font-weight: 300;
+    }
+    &__list {
+        &-item {
+            list-style-type: none;
+            margin: 0 0 16px 0;
+        }
+        &-tick {
+            margin-right: 23px;
+        }
+    }
+}
+@import "adaptive/registration_adaptive";

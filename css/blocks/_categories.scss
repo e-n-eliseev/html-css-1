@@ -1,0 +1,41 @@
+.categories {
+    padding-top: 65px;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    &__item {
+        background-color: #c4c4c4;
+        width: 360px;
+        height: 260px;
+        margin-bottom: 30px;
+        display: flex;
+        justify-content: center;
+        padding-top: 105px;
+        &_women {
+            background-image: url(../img/women.png);
+        }
+        &_men {
+            background-image: url(../img/men.png);
+        }
+        &_children {
+            background-image: url(../img/kids.png);
+        }
+        &_accesories {
+            padding-top: 65px;
+            background-image: url(../img/accessories.png);
+            width: 100%;
+            height: 180px;
+        }
+        &-name {
+            @include font(16px, 19px, #ffffff);
+            &_red {
+                @include font(24px, 29px, $main-red-color);
+            }
+        }
+        &-link {
+            text-decoration: none;
+            text-align: center;
+        }
+    }
+}
+@import "adaptive/categories_adaptive";

@@ -1,0 +1,16 @@
+@media (max-width: 766px) {
+    .footer {
+        &__content {
+            flex-direction: column-reverse;
+            align-items: center;
+        }
+        &__copyrights {
+            padding: 0 0 8px 0;
+        }
+        &__links {
+            &-img {
+                margin: 43px 0 40px 8px;
+            }
+        }
+    }
+}

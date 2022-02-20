@@ -1,0 +1,182 @@
+.basket {
+    display: flex;
+    justify-content: space-between;
+    padding: 96px 0 128px 0;
+}
+.cart {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    &__item {
+        max-width: 652px;
+        display: flex;
+        margin-bottom: 40px;
+        box-shadow: 17px 19px 24px rgba(0, 0, 0, 0.13);
+    }
+    &__img {
+        width: 262px;
+        height: 306px;
+    }
+    &__details {
+        margin: 22px 97px 20px 31px;
+    }
+    &__name {
+        @include font(24px, 29px, #222222);
+        margin-bottom: 42px;
+        text-transform: uppercase;
+    }
+    &__info {
+        @include font(22px, 26px, #575757);
+        margin-bottom: 6px;
+        &_red {
+            color: #ef5b70;
+        }
+    }
+    &__quantity {
+        display: flex;
+        align-items: center;
+    }
+    &__input {
+        width: 44px;
+        height: 25px;
+        border: 1px solid #eaeaea;
+        margin-left: 24px;
+        @include font(18px, 22px, #656565);
+        padding: 0px 6px 3px 14px;
+        transition: 0.5s ease-in-out 0.1s;
+        &:focus {
+            outline: none;
+            border: 1px solid $main-red-color;
+            background-color: $item-background-color;
+        }
+        &:hover {
+            background-color: $item-background-color;
+        }
+    }
+    &__delete {
+        position: absolute;
+        width: 18px;
+        height: 18px;
+        background-color: transparent;
+        border: none;
+        margin: 28px 22px 0 0;
+        right: 0;
+        transition: 0.5s ease-in-out 0.1s;
+        &-img {
+            fill: #575757;
+        }
+        &:hover {
+            transform: rotate(360deg);
+            .cart__delete-img {
+                fill: #ef5b70;
+            }
+        }
+    }
+    &__button-wrapper {
+        display: flex;
+        justify-content: space-between;
+        margin-top: 32px;
+    }
+    &__button {
+        width: 235px;
+        height: 50px;
+        @include btn(#000000, 1px solid #a4a4a4, transparent, none);
+        font-weight: 300;
+        @include font(14px, 17px, #000000);
+        &_link {
+            padding: 16px 39px;
+        }
+        &:hover {
+            @include btn-hover($btn-text-hover-color, #ef5b70, 1px solid transparent, none);
+        }
+    }
+}
+.purchase {
+    width: 360px;
+    margin-top: 17px;
+    &__address {
+        display: flex;
+        flex-direction: column;
+        margin-bottom: 57px;
+    }
+    &__heading {
+        font-weight: 300;
+        @include font(16px, 19px, #222222);
+        margin-bottom: 20px;
+    }
+    &__input {
+        margin-bottom: 20px;
+        width: 360px;
+        height: 45px;
+        border: 1px solid #a4a4a4;
+        padding: 0 18px;
+        transition: 0.5s ease-in-out 0.1s;
+        &::placeholder {
+            font-weight: 300;
+            @include font(13px, 16px, #b1b1b1);
+        }
+        &:focus {
+            outline: none;
+            border: 1px solid $main-red-color;
+            background-color: $item-background-color;
+        }
+        &:hover {
+            background-color: $item-background-color;
+        }
+    }
+    &__button {
+        width: 102px;
+        height: 35px;
+        @include btn(#000000, 1px solid #a4a4a4, transparent, none);
+        font-weight: 300;
+        @include font(11px, 13px, #4a4a4a);
+        &:hover {
+            @include btn-hover($btn-text-hover-color, #ef5b70, 1px solid transparent, none);
+        }
+    }
+    &__price {
+        width: 360px;
+        height: 214px;
+        background-color: #f5f3f3;
+        padding: 40px 43px 42px 44px;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+        &-sub {
+            @include font(11px, 13px, #4a4a4a);
+            display: flex;
+            margin: 0 -9px 12px 0;
+            &_number {
+                padding-left: 26px;
+            }
+        }
+        &-grand {
+            font-weight: 300;
+            @include font(16px, 19px, #222222);
+            margin: 0 -3px 21px 0;
+            display: flex;
+            &_number {
+                padding-left: 25px;
+                color: #f16d7f;
+            }
+        }
+        &-proceed {
+            font-weight: 300;
+            @include font(16px, 19px, $btn-text-hover-color);
+            width: 274px;
+            height: 50px;
+            padding: 15px 40px;
+            @include btn($btn-text-hover-color, 1px solid transparent, $main-red-color, none);
+            &:hover {
+                @include btn-hover($main-red-color, $btn-text-hover-color, 1px solid $main-red-color, none);
+            }
+        }
+        &-line {
+            width: 275px;
+            padding-top: 1px;
+            background-color: #e2e2e2;
+            margin-bottom: 17px;
+        }
+    }
+}
+@import "adaptive/basket_adaptive";

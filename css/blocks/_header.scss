@@ -1,0 +1,105 @@
+.header {
+    position: relative;
+    background-color: #222222;
+    &__menu {
+        &_open {
+            display: block;
+        }
+        &_closed {
+            display: none;
+        }
+        position: absolute;
+        z-index: 100;
+        top: 100%;
+        right: 0;
+        width: 232px;
+        min-height: 764px;
+        background: $btn-text-hover-color;
+        box-shadow: 6px 4px 35px rgba(0, 0, 0, 0.21);
+        padding: 37px 34px;
+        &-wrapper {
+            position: relative;
+        }
+        &-button {
+            position: absolute;
+            margin: -21px -17px 0 0;
+            right: 0;
+            background-color: transparent;
+            border: none;
+            transition: 0.5s ease-in-out 0.1s;
+            &-img {
+                fill: #6f6e6e;
+            }
+            &:hover {
+                transform: rotate(360deg);
+                .header__menu-button-img {
+                    fill: #ef5b70;
+                }
+            }
+        }
+        &-heading {
+            @include font(14px, 17px, #000000);
+            font-weight: bold;
+            margin-bottom: 24px;
+        }
+        &-list {
+            list-style: none;
+            @include font(14px, 17px, $main-red-color);
+            padding-bottom: 9px;
+            text-transform: uppercase;
+        }
+        &-item {
+            list-style: none;
+            margin: 11px 21px;
+        }
+        &-link {
+            text-decoration: none;
+            @include font(14px, 17px, #6e6e6e);
+            &:hover {
+                text-decoration: underline;
+                color: $main-red-color;
+            }
+        }
+    }
+    &__navigation {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 18px 0;
+    }
+    &__left {
+        &-logo {
+            margin-right: 41px;
+        }
+        &-search {
+            background-color: transparent;
+            border: none;
+        }
+    }
+    &__right {
+        &-profile {
+            @include btn(white, 1px solid transparent, transparent, #e8e8e8);
+            margin: 0 42px 0 25px;
+            &:hover {
+                @include btn-hover(white, transparent, 1px solid transparent, $btn-hover-color);
+            }
+        }
+        &-menu {
+            background-color: transparent;
+            border: none;
+        }
+        &-burger {
+            @include btn(white, 1px solid transparent, transparent, #e8e8e8);
+            &:hover {
+                @include btn-hover(white, transparent, 1px solid transparent, $btn-hover-color);
+            }
+        }
+        &-basket {
+            @include btn(white, 1px solid transparent, transparent, #e8e8e8);
+            &:hover {
+                @include btn-hover(white, transparent, 1px solid transparent, $btn-hover-color);
+            }
+        }
+    }
+}
+@import "adaptive/header_adaptive";
